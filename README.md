@@ -1,16 +1,70 @@
-# React + Vite
+# ClearSalary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for estimating Italian net salary starting from the gross annual salary (RAL).
 
-Currently, two official plugins are available:
+ClearSalary was developed as part of the Jet HR Product Builder Challenge.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[Try ClearSalary](https://majestic-macaron-f4fb0d.netlify.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Calculate estimated annual and monthly net salary from RAL
+- Support for 12, 13 and 14 monthly payments
+- Breakdown of:
+  - Social security contributions
+  - Taxable income
+  - Gross and net IRPEF
+  - Employee tax deductions
+  - Regional tax
+  - Municipal tax
+- Visual representation of salary composition
+- Links to the official sources used for the tax rules
+- Responsive layout for desktop and mobile
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- JavaScript
+- Recharts
+- CSS
+- Git & GitHub
+- Netlify
+
+## Tax Rules
+
+The calculator uses tax and contribution rules configured for 2026.
+
+The prototype currently includes:
+
+- Employee social security contributions
+- Italian IRPEF brackets
+- Employee tax deductions
+- Additional employee tax benefits
+- Lombardy regional income tax
+- Milan municipal income tax
+
+Official sources are linked directly within the application.
+
+## Project Structure
+
+```text
+src/
+├── assets/
+│   └── jet-hr-logo.png
+├── calculator/
+│   ├── calculateNet.js
+│   ├── contributions.js
+│   ├── deductions.js
+│   ├── irpef.js
+│   ├── municipalTax.js
+│   └── regionalTax.js
+├── components/
+│   └── SalaryChart.jsx
+├── config/
+│   └── taxRules2026.js
+├── App.jsx
+├── App.css
+└── main.jsx
