@@ -72,7 +72,7 @@ select {
 
 .subtitle {
   max-width: 580px;
-  margin: 16px 0 0;
+  margin: 16px auto 0;
   color: #686d75;
   font-size: 16px;
   line-height: 1.5;
