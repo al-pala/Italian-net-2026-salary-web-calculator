@@ -6,7 +6,7 @@ ClearSalary was developed as part of the Jet HR Product Builder Challenge.
 
 ## Live Demo
 
-[Try ClearSalary]([https://majestic-macaron-f4fb0d.netlify.app/](https://clearsalary.netlify.app/))
+[Try ClearSalary](https://clearsalary.netlify.app/)
 
 ## Features
 
