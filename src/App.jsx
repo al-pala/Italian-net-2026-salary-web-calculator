@@ -13,7 +13,6 @@ function SourceLink({ source }) {
       rel="noopener noreferrer"
       className="source-link"
       title={`Fonte: ${source.label}`}
-      aria-label={`Fonte: ${source.label}`}
     >
       <svg
         width="15"
@@ -85,7 +84,6 @@ function App() {
   return (
     <main className="app">
       <section className="calculator-card">
-
         <header className="header">
           <img
             src={jetHrLogo}
@@ -98,13 +96,11 @@ function App() {
           <h1>Calcola il tuo stipendio netto</h1>
 
           <p className="subtitle">
-            Inserisci la tua RAL per ottenere una stima dello
-            stipendio netto.
+            Inserisci la tua RAL per ottenere una stima dello stipendio netto.
           </p>
         </header>
 
         <section className="inputs">
-
           <div className="input-group">
             <label htmlFor="ral">RAL annua</label>
 
@@ -144,7 +140,6 @@ function App() {
           >
             Calcola lo stipendio
           </button>
-
         </section>
 
         {error && (
@@ -155,7 +150,6 @@ function App() {
 
         {result && (
           <section className="result">
-
             <div className="main-result">
               <span>Stipendio netto medio</span>
 
@@ -173,7 +167,6 @@ function App() {
             </div>
 
             <div className="summary">
-
               <div>
                 <span>RAL</span>
 
@@ -206,19 +199,16 @@ function App() {
                   €
                 </strong>
               </div>
-
             </div>
 
             <SalaryChart result={result} />
 
             <details className="details">
-
-              <summary>Dettaglio del calcolo</summary>
+              <summary>
+                Dettaglio del calcolo
+              </summary>
 
               <div className="details-content">
-
-                {/* CONTRIBUTI */}
-
                 <div>
                   <span>
                     Contributi previdenziali{" "}
@@ -236,8 +226,6 @@ function App() {
                   </strong>
                 </div>
 
-                {/* REDDITO IMPONIBILE */}
-
                 <div>
                   <span>
                     Reddito imponibile{" "}
@@ -253,8 +241,6 @@ function App() {
                     €
                   </strong>
                 </div>
-
-                {/* IRPEF LORDA */}
 
                 <div>
                   <span>
@@ -272,13 +258,13 @@ function App() {
                   </strong>
                 </div>
 
-                {/* DETRAZIONE LAVORO DIPENDENTE */}
-
                 <div>
                   <span>
                     Detrazioni lavoro dipendente{" "}
                     <SourceLink
-                      source={taxRules2026.sources.employeeDeduction}
+                      source={
+                        taxRules2026.sources.employeeDeduction
+                      }
                     />
                   </span>
 
@@ -291,13 +277,13 @@ function App() {
                   </strong>
                 </div>
 
-                {/* DETRAZIONE AGGIUNTIVA */}
-
                 <div>
                   <span>
                     Detrazione aggiuntiva{" "}
                     <SourceLink
-                      source={taxRules2026.sources.additionalDeduction}
+                      source={
+                        taxRules2026.sources.additionalDeduction
+                      }
                     />
                   </span>
 
@@ -309,8 +295,6 @@ function App() {
                     €
                   </strong>
                 </div>
-
-                {/* IRPEF NETTA */}
 
                 <div>
                   <span>
@@ -328,13 +312,13 @@ function App() {
                   </strong>
                 </div>
 
-                {/* ADDIZIONALE REGIONALE */}
-
                 <div>
                   <span>
                     Addizionale regionale{" "}
                     <SourceLink
-                      source={taxRules2026.sources.regionalTax}
+                      source={
+                        taxRules2026.sources.regionalTax
+                      }
                     />
                   </span>
 
@@ -346,13 +330,13 @@ function App() {
                   </strong>
                 </div>
 
-                {/* ADDIZIONALE COMUNALE */}
-
                 <div>
                   <span>
                     Addizionale comunale{" "}
                     <SourceLink
-                      source={taxRules2026.sources.municipalTax}
+                      source={
+                        taxRules2026.sources.municipalTax
+                      }
                     />
                   </span>
 
@@ -363,21 +347,88 @@ function App() {
                     €
                   </strong>
                 </div>
-
               </div>
             </details>
-
           </section>
         )}
 
         <footer>
-          <p>
-            Stima indicativa basata sulle regole fiscali configurate
-            nel prototipo.
-          </p>
-        </footer>
+          <p className="footer-note">
+            Stima indicativa basata sulle regole fiscali configurate nel prototipo.
 
-      </section>
+            <details className="project-info">
+              <summary
+                aria-label="Informazioni sul progetto"
+                title="Descrizione del progetto"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+
+                  <path
+                    d="M12 10.5V16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+
+                  <circle
+                    cx="12"
+                    cy="7.5"
+                    r="1"
+                    fill="currentColor"
+                  />
+                </svg>
+              </summary>
+
+              <div className="project-description">
+                <strong>Descrizione del progetto</strong>
+
+                <p>
+                  ClearSalary è un prototipo di calcolatore dello
+                  stipendio netto sviluppato per il Product Builder
+                  Challenge di Jet HR.
+                </p>
+
+                <p>
+                  L'applicazione stima lo stipendio netto a partire
+                  dalla RAL, applicando le principali regole fiscali
+                  e contributive configurate per il 2026.
+                </p>
+
+                <p>
+                  Il progetto è sviluppato con React e Vite e include
+                  il dettaglio delle componenti del calcolo, la
+                  visualizzazione della composizione della RAL e i
+                  riferimenti alle fonti ufficiali utilizzate.
+                </p>
+              </div>
+            </details>
+          </p>
+
+          <div className="footer-links">
+            <a
+              href="https://drive.google.com/file/d/16QkR-eqLFi7pGeOxWvCWAEE-xDEwdmnm/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cv-link"
+            >
+              CV di Andrea Pala
+            </a>
+          </div>
+        </footer>      </section>
     </main>
   );
 }

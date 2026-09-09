@@ -49,12 +49,14 @@ select {
   padding: 42px 48px 30px;
   border-bottom: 1px solid #eeeeef;
 }
+
 .logo {
   width: 110px;
   height: auto;
   display: block;
   margin-bottom: 28px;
 }
+
 .eyebrow {
   margin: 0 0 12px;
   font-size: 12px;
@@ -297,18 +299,117 @@ select {
   font-size: 14px;
 }
 
+/* SOURCE LINKS */
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  color: #777b83;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.source-link:hover {
+  color: #17191c;
+}
+
 /* FOOTER */
 
 footer {
   padding: 0 48px 32px;
+  text-align: center;
 }
 
-footer p {
+.footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   margin: 0;
   color: #9699a0;
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cv-link {
+  color: #686d75;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-link:hover {
+  color: #17191c;
+  text-decoration: underline;
+}
+
+/* PROJECT INFO */
+
+.project-info {
+  position: relative;
+  display: inline-flex;
+}
+
+.project-info summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  cursor: pointer;
+  color: #9a9da3;
+  list-style: none;
+}
+
+.project-info summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-info summary:hover {
+  color: #17191c;
+}
+
+.project-description {
+  position: absolute;
+  bottom: 28px;
+  right: 0;
+  width: 320px;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid #e8e9ec;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  text-align: left;
+  z-index: 10;
+}
+
+.project-description strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #17191c;
+  font-size: 13px;
+}
+
+.project-description p {
+  margin: 0 0 8px;
+  color: #686d75;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.project-description p:last-child {
+  margin-bottom: 0;
 }
 
 /* MOBILE */
@@ -356,19 +457,9 @@ footer p {
     border-top: 1px solid #e8e9ec;
   }
 
-  .source-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 5px;
-  color: #777b83;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  }
-
-  .source-link:hover {
-    color: #17191c;
+  .project-description {
+    width: 280px;
+    right: -10px;
   }
 
   footer {
