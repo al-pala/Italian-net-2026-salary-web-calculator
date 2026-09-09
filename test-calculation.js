@@ -30,7 +30,7 @@ rl.question("Inserisci la RAL: ", (input) => {
 
     // 4. Detrazioni
     const deductions =
-      calculateTotalDeductions(30000);
+      calculateTotalDeductions(taxableIncome);
 
     // 5. Addizionale regionale
     const regionalTax =
